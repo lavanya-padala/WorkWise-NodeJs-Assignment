@@ -1,6 +1,4 @@
-# Workwise E-commerce API
-
-Workwise E-commerce API is a Node.js-based backend application designed to handle user registration, login, product management, and cart functionality for an e-commerce platform. The API interacts with a PostgreSQL database to perform various CRUD operations.
+Node.js-based backend application designed to handle user registration, login, product management, and cart functionality. The API interacts with a PostgreSQL database to perform various CRUD operations.
 
 ## Features
 
@@ -17,7 +15,7 @@ Workwise E-commerce API is a Node.js-based backend application designed to handl
 - **Authentication**: JWT (JSON Web Tokens)
 - **Validation**: Express-validator
 - **Error Handling**: Custom messages and status codes
-- **Security**: Password hashing with Bcrypt
+- **Security**: Password hashing with bcrypt
 
 ## Setup Instructions
 
@@ -44,7 +42,7 @@ Workwise E-commerce API is a Node.js-based backend application designed to handl
 3. **Create PostgreSQL Database**
 
    ```bash
-    Restore the database in Postgresql using SQL dump file available on GitHub
+    Restore the database in Postgresql using SQL dump file(WorkWise.Database) available on GitHub
 
 4. **Configure Environment Variables**
 
@@ -61,7 +59,7 @@ Workwise E-commerce API is a Node.js-based backend application designed to handl
 5. **Test the API**
 
    ```bash
-    Export given postman API documentation available on GitHub and perform API testing
+    Export given postman API documentation(WorkWise.postman_collection.json) available on GitHub and perform API testing
 
     
 
