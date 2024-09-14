@@ -34,7 +34,6 @@ Workwise E-commerce API is a Node.js-based backend application designed to handl
 
    ```bash
    git clone "https://github.com/lavanya-padala/WorkWise-NodeJs-Assignment"
-   cd workwise-ecommerce-api
 
 2. **Install Dependencies**
 
@@ -45,12 +44,12 @@ Workwise E-commerce API is a Node.js-based backend application designed to handl
 3. **Create PostgreSQL Database**
 
    ```bash
-    Restore the database in postgresql using sql dump file available in github
+    Restore the database in Postgresql using SQL dump file available on GitHub
 
 4. **Configure Environment Variables**
 
    ```bash
-   Create a .env file in the root directory and add your PostgreSQL credentials,Redis Credentials and JWT secret.
+   Create a .env file in the root directory and add your PostgreSQL credentials, Redis Credentials, and JWT secret.
    npm install
 
 5. **Start the Server**
@@ -62,7 +61,7 @@ Workwise E-commerce API is a Node.js-based backend application designed to handl
 5. **Test the API**
 
    ```bash
-    Export given postman API documentation available in github and perform API testing
+    Export given postman API documentation available on GitHub and perform API testing
 
     
 
