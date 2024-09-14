@@ -1,0 +1,58 @@
+{
+    "userAlreadyExists": {
+      "success": false,
+      "error": "User already exists"
+    },
+    "emailAlreadyExists": {
+      "success": false,
+      "error": "Email address already registered!"
+    },
+    "mobileAlreadyExists": {
+      "success": false,
+      "error": "Mobile number already registered!"
+    },
+    "signupSuccess": {
+      "success": true,
+      "message": "Signup successful"
+    },
+    "internalError": {
+      "success": false,
+      "error": "Internal server error"
+    },
+    "userNotFound": {
+      "success": false,
+      "error": "User not found"
+    },
+    "invalidCredentials": {
+      "success": false,
+      "error": "Invalid credentials"
+    },
+    "productAdded":{
+      "success":true,
+      "message":"Product added Succesfully"
+    },
+    "invalid_token": "Invalid token",
+    "invalid_token_session": "Invalid token or session",
+    "loginSuccess": "Login successfully",
+    "headerMissing": "Authorization header missing",
+    "authorization_error": "unauthorized",
+    "tokenMissing": "Token missing",
+    "sessionError": "Session expired or not found",
+    "nameRequired": "Name is required.",
+    "categoryRequired": "Category is required.",
+    "priceRequired": "Price is required.",
+    "discountRequired": "Discount is required.",
+    "descriptionRequired": "Description is required.",
+    "secretKeyMissing": "JWT secret key is missing in environment variables.",
+    "invalidPrice":"Invalid price",
+    "invalidDiscount":"Invalid discount%",
+    "productDeleted":"Product deleted succesfully",
+    "productUpdated":"Product updated succesfully",
+    "productNoLongerExists":"Product no longer exists",
+    "productNotFound":"Product not found",
+    "missingSearchParameters": "At least one search parameter (name or category) is required.",
+    "noProductsFound": "No products found matching the criteria.",
+    "productAddedToCart":"Product succesfully added to cart",
+    "productNotFoundInCart":"Product not found in cart to remove",
+    "productRemovedFromCart":"Product succesfully removed from cart"
+}

@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "3136def3-cb76-4c68-b2ad-f95687662692",
+		"name": "WorkWise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37279400"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email_address\":\"lavanyapadala66@gmail.com\",\r\n    \"contact_number\":\"6578981244\",\r\n    \"password\":\"Lavanya@12\",\r\n    \"role\":\"seller\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:7000/api/v1/user/signup",
+				"description": "This endpoint allows users to sign up by submitting their email address, contact number, password, and role via an HTTP POST request to the specified URL.\n\n### Request Body\n\n- `email_address` (string, required): The email address of the user.\n    \n- `contact_number` (string, required): The contact number of the user.\n    \n- `password` (string, required): The password for the user account.\n    \n- `role` (string, required): The role of the user.\n    \n\n### Response\n\nThe response of this request is a JSON schema representing the structure of the response data. The schema will define the expected properties and their data types in the response."
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "### POST /api/v1/user/login\n\nThis endpoint is used to authenticate a user and obtain an authentication token.\n\n#### Request Body\n\n- `email_address` (text, required): The email address of the user.\n    \n- `password` (text, required): The password of the user.\n    \n\n#### Response\n\nThe response is a JSON object with the following schema:\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"success\": {\n            \"type\": \"boolean\"\n        },\n        \"message\": {\n            \"type\": \"string\"\n        },\n        \"authToken\": {\n            \"type\": \"string\"\n        }\n    }\n}\n\n ```"
+			},
+			"response": []
+		},
+		{
+			"name": "Seller-Add Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "### Add Product\n\nThis endpoint allows sellers to add a new product.\n\n#### Request Body\n\n- `name` (string, required): The name of the product.\n    \n- `category` (string, required): The category of the product.\n    \n- `price` (number, required): The price of the product.\n    \n- `description` (string, required): A brief description of the product.\n    \n- `discount` (number, required): The discount on the product.\n    \n\n#### Response\n\nThe response is in JSON format with the following schema:\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"success\": {\n            \"type\": \"boolean\"\n        },\n        \"message\": {\n            \"type\": \"string\"\n        }\n    }\n}\n\n ```\n\n- `success` (boolean): Indicates if the request was successful.\n    \n- `message` (string): A message related to the request.\n    \n\nThe request returns a status code of 401 for unauthorized access."
+			},
+			"response": []
+		},
+		{
+			"name": "Seller-Delete Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "The API endpoint sends an HTTP POST request to delete a product associated with the seller.Here productId is passed as a parameter.Upon successful execution, the response returns a JSON object with a status code of 200 and a content type of application/json. The response schema is as follows:\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"success\": {\n            \"type\": \"boolean\"\n        },\n        \"message\": {\n            \"type\": \"string\"\n        }\n    }\n}\n\n ```"
+			},
+			"response": []
+		},
+		{
+			"name": "Seller-Edit Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "This API endpoint allows the seller to edit a specific product by making an HTTP POST request to the specified URL. The request should include a JSON payload in the raw request body with the following parameters:\n\n- `name` (string): The updated name of the product.\n    \n- `category` (string): The updated category of the product.\n    \n- `price` (number): The updated price of the product.\n    \n- `description` (string): The updated description of the product.\n    \n- `discount` (number): The updated discount on the product.\n    \n\n### Request Body\n\n``` json\n{\n  \"name\": \"\",\n  \"category\": \"\",\n  \"price\": 0,\n  \"description\": \"\",\n  \"discount\": 0\n}\n\n ```\n\nUpon successful execution, the API returns a JSON response with a status code of 200 and the following content:\n\n### Response\n\n- Status: 200\n    \n- Content-Type: application/json\n    \n\n``` json\n{\n  \"success\": true,\n  \"message\": \"\"\n}\n\n ```"
+			},
+			"response": []
+		},
+		{
+			"name": "Buyer-Search product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "### GET /api/v1/buyer/search-products\n\nThis endpoint retrieves a list of products based on the provided search criteria.\n\n#### Request\n\n- Parameters:\n    \n    - `name` (string, required): The name of the product to search for.\n        \n    - `category` (string, required): The category of the product to search for.\n        \n\n#### Response\n\nThe response is a JSON object with the following schema:\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"success\": {\n            \"type\": \"boolean\"\n        },\n        \"products\": {\n            \"type\": \"array\",\n            \"items\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"id\": {\n                        \"type\": \"integer\"\n                    },\n                    \"seller_id\": {\n                        \"type\": \"integer\"\n                    },\n                    \"name\": {\n                        \"type\": \"string\"\n                    },\n                    \"category\": {\n                        \"type\": \"string\"\n                    },\n                    \"description\": {\n                        \"type\": \"string\"\n                    },\n                    \"price\": {\n                        \"type\": \"string\"\n                    },\n                    \"discount\": {\n                        \"type\": \"string\"\n                    },\n                    \"created_at\": {\n                        \"type\": \"string\"\n                    },\n                    \"updated_at\": {\n                        \"type\": \"string\"\n                    },\n                    \"deleted_at\": {\n                        \"type\": [\"string\", \"null\"]\n                    }\n                }\n            }\n        }\n    }\n}\n\n ```"
+			},
+			"response": []
+		},
+		{
+			"name": "Buyer-Add To Cart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "The API endpoint `POST /api/v1/buyer/add-to-cart` is used to add a product to the buyer's cart.\n\n### Request Body\n\n- `productId` (string): The ID of the product to be added to the cart.\n    \n- `quantity` (string): The quantity of the product to be added to the cart.\n    \n\n### Response\n\nThe response is a JSON object with the following schema:\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"success\": {\n            \"type\": \"boolean\"\n        },\n        \"message\": {\n            \"type\": \"string\"\n        }\n    }\n}\n\n ```\n\nThe response object contains:\n\n- `success` (boolean): Indicates whether the operation was successful.\n    \n- `message` (string): Additional information or error message."
+			},
+			"response": []
+		},
+		{
+			"name": "Buyer-Remove From Cart",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzI2MzIxNTE0LCJleHAiOjE3MjY5MjYzMTR9.rN2UF8hI7P3nIkkyLl8cl31Yz5m5zm_0dmanZsOir1o",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:9000/api/v1/buyer/remove-from-cart/11",
+				"description": "### Remove Item from Cart\n\nThis endpoint is used to remove an item from the buyer's cart.\n\n#### Request\n\n- Method: DELETE\n    \n- URL: `http://localhost:9000/api/v1/buyer/remove-from-cart/11`\n    \n- productId is passed as a parameter here\n    \n\n#### Response\n\nThe response for this request is in JSON format and has the following schema:\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"success\": {\n            \"type\": \"boolean\"\n        },\n        \"message\": {\n            \"type\": \"string\"\n        }\n    }\n}\n\n ```\n\nThe response contains a `success` boolean field indicating the success status of the operation, and a `message` field which provides additional information in case of an error."
+			},
+			"response": []
+		}
+	]
+}
