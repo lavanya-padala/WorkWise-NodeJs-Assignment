@@ -33,7 +33,7 @@ Workwise E-commerce API is a Node.js-based backend application designed to handl
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/workwise-ecommerce-api.git
+   git clone "https://github.com/lavanya-padala/WorkWise-NodeJs-Assignment"
    cd workwise-ecommerce-api
 
 2. **Install Dependencies**
